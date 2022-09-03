@@ -1,6 +1,6 @@
 {
   "name": "outliers2d",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Remove outliers in 2D maps using Median Absolute Deviation",
   "main": "index.js",
   "scripts": {
