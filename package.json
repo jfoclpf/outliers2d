@@ -1,0 +1,14 @@
+{
+  "name": "outliers2d",
+  "version": "1.0.0",
+  "description": "Remove outliers in 2D maps using Median Absolute Deviation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "João Pimentel Ferreira",
+  "license": "ISC",
+  "dependencies": {
+    "mathjs": "^11.1.0"
+  }
+}
