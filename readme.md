@@ -1,4 +1,4 @@
-Remove outliers in a 2D map or cartesian coordinate system using the [Median Absolute Deviation](https://en.wikipedia.org/wiki/Median_absolute_deviation).
+Remove outliers in a 2D map or cartesian coordinate system using an error elippse based on the [Median Absolute Deviation](https://en.wikipedia.org/wiki/Median_absolute_deviation).
 
 ## outliers2d(points [, sigma = 3])
 
