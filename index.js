@@ -1,4 +1,4 @@
-const math = require('math')
+const math = require('mathjs')
 
 // points should ne in format, f.ex: [[1,2],[3,4],[5,6],..]
 function outliers2D (points, _sigma) {
@@ -22,8 +22,8 @@ function outliers2D (points, _sigma) {
       return false
     }
   })
-
+  // console.log(fliteredPoints)
   return { fliteredPoints, strippedPoints }
 }
 
-module.export = outliers2D
+module.exports = outliers2D

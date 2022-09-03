@@ -4,11 +4,14 @@
   "description": "Remove outliers in 2D maps using Median Absolute Deviation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "standard && node test.js"
   },
   "author": "João Pimentel Ferreira",
   "license": "MIT",
   "dependencies": {
     "mathjs": "^11.1.0"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0"
   }
 }
