@@ -1,6 +1,6 @@
 const { square, median, mad } = require('mathjs')
 
-// points should ne in format, f.ex: [[1,2],[3,4],[5,6],..]
+// points should be in format, f.ex: [[1,2],[3,4],[5,6],..]
 function outliers2D (points, _sigma) {
   const sigma = _sigma || 3.5
   const medianPoint = [median(points.map(p => p[0])), median(points.map(p => p[1]))]
