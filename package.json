@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "João Pimentel Ferreira",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "mathjs": "^11.1.0"
   }
