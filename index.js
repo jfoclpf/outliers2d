@@ -10,7 +10,7 @@ function outliers2D (points, _sigma) {
   const mad2d = math.sqrt(math.square(madValue[0]) + math.square(madValue[1]))
 
   const strippedPoints = []
-  const fliteredPoints = points.filter(pt => {
+  const filteredPoints = points.filter(pt => {
     if (
       (pt[0] - medianPoint[0] < sigma * madValue[0]) &&
       (pt[1] - medianPoint[1] < sigma * madValue[1]) &&
@@ -22,8 +22,7 @@ function outliers2D (points, _sigma) {
       return false
     }
   })
-  // console.log(fliteredPoints)
-  return { fliteredPoints, strippedPoints }
+  return { filteredPoints, strippedPoints }
 }
 
 module.exports = outliers2D

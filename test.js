@@ -11,10 +11,10 @@ const points = [
 
 const res = outliers2d(points)
 
-console.log(res.fliteredPoints) // [[0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1]]
+console.log(res.filteredPoints) // [[0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1]]
 console.log(res.strippedPoints) // [[ 5, 5 ]]
 
-if (res.fliteredPoints.length && res.fliteredPoints.length) {
+if (res.filteredPoints.length && res.filteredPoints.length) {
   console.log('\nOK')
   process.exit(0)
 } else {
