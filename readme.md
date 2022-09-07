@@ -1,25 +1,22 @@
-Remove outliers in a 2D map or cartesian coordinate system considering a single cluster of points
+Remove outliers in a 2D map or cartesian coordinate system considering a single cluster of points.
 
 It may use:
 
 - an error ellipse based on the [Median Absolute Deviation](https://en.wikipedia.org/wiki/Median_absolute_deviation),
-- [DBSCAN](https://en.wikipedia.org/wiki/DBSCAN) considering the main cluster the cluster with more points
+- [DBSCAN](https://en.wikipedia.org/wiki/DBSCAN) considering the main cluster as the cluster with more points
 
 #### Median Absolute Deviation error ellipse
 ![image](https://user-images.githubusercontent.com/3984909/188286763-21dbf76d-3968-4618-9f8c-83a7e3cbee13.png)
 
 ## ellipseMad(points [, sigma = 3.5])
 
+ - **sigma**: the linear scale to apply to the ellipse whose center axes are defined by the median. Default is 3.5.
+
 ```js
 const outliers2d = require('outliers2d')
 
 const points = [
-  [0, 0],
-  [0, 1],
-  [0.5, 0.5],
-  [1, 0],
-  [1, 1],
-  [5, 5]
+  [0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1], [5, 5]
 ]
 
 const { filteredPoints, strippedPoints, medianPoint } = outliers2d.ellipseMad(points)
@@ -31,20 +28,15 @@ console.log(medianPoint) // [ 0.75, 0.75 ]
 
 ## dbscan(points [, alpha = 5, radius = 2, neighbours = 5])
 
- - **alpha**: minimum number of points for cluster NOT to be considered as outlier
- - **radius**: distance between points to be considered in the same cluster
- - **neighbours**: minimum number of neighbours around one point to be considered a cluster
+ - **alpha**: minimum number of points for cluster NOT to be considered as outlier. Default is 5.
+ - **radius**: distance between points to be considered in the same cluster. Default is 2.
+ - **neighbours**: minimum number of neighbours around one point to be considered a cluster. Default is 5.
 
 ```js
 const outliers2d = require('outliers2d')
 
 const points = [
-  [0, 0],
-  [0, 1],
-  [0.5, 0.5],
-  [1, 0],
-  [1, 1],
-  [5, 5]
+  [0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1], [5, 5]
 ]
 
 const filteredPoints = outliers2d.dbscan(points)
