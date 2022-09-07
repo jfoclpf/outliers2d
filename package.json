@@ -4,7 +4,7 @@
   "description": "Remove outliers in 2D maps using Median Absolute Deviation",
   "main": "index.js",
   "scripts": {
-    "test": "standard && node test.js"
+    "test": "standard && mocha"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
     "mathjs": "^11.1.0"
   },
   "devDependencies": {
+    "mocha": "^10.0.0",
     "standard": "^17.0.0"
   }
 }
