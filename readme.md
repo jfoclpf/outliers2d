@@ -1,3 +1,7 @@
+[![Node.js CI](https://github.com/jfoclpf/outliers2d/actions/workflows/node.js.yml/badge.svg)](https://github.com/jfoclpf/outliers2d/actions/workflows/node.js.yml)
+[![CodeQL Security Check](https://github.com/jfoclpf/outliers2d/actions/workflows/codeql.yml/badge.svg)](https://github.com/jfoclpf/outliers2d/actions/workflows/codeql.yml)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
+
 Removes outliers in a 2D map or cartesian coordinate system.
 
 It may use:
