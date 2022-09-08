@@ -21,13 +21,13 @@ It may use:
  - **sigma**: the linear scale to apply to the ellipse whose center axes are defined by the median. Default is 3.5.
 
 ```js
-const outliers2d = require('outliers2d')
+const { ellipseMad } = require('outliers2d')
 
 const points = [
   [0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1], [5, 5]
 ]
 
-const { filteredPoints, strippedPoints, medianPoint } = outliers2d.ellipseMad(points)
+const { filteredPoints, strippedPoints, medianPoint } = ellipseMad(points)
 
 console.log(filteredPoints) // [[0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1]]
 console.log(strippedPoints) // [[ 5, 5 ]]
@@ -41,14 +41,17 @@ console.log(medianPoint) // [ 0.75, 0.75 ]
  - **neighbours**: minimum number of neighbours to be considered a cluster. Default is 5.
 
 ```js
-const outliers2d = require('outliers2d')
+const { dbscan } = require('outliers2d')
 
 const points = [
   [0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1], [5, 5], [5, 6], [51, 51]
 ]
 
-console.log(outliers2d.dbscan(points)) // [[0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1]]
-console.log(outliers2d.dbscan(points, 2, 3, 2)) // [[0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1], [5, 5], [5, 6]]
+console.log(dbscan(points))
+// [[0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1]]
+
+console.log(dbscan(points, 2, 3, 2))
+// [[0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1], [5, 5], [5, 6]]
 ```
 
 ## Rational
