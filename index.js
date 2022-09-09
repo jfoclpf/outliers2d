@@ -12,7 +12,7 @@ function ellipseMad (points, _sigma) {
   // remove outliers with Median Absolute Deviation (MAD)
   const madValue = [mad(points.map(p => p[0])), mad(points.map(p => p[1]))]
 
-  const strippedPoints = []
+  const outliers = []
   const filteredPoints = points.filter(pt => {
     if (
       square(pt[0] - medianPoint[0]) / square(sigma * madValue[0]) +
@@ -20,11 +20,11 @@ function ellipseMad (points, _sigma) {
     ) {
       return true
     } else {
-      strippedPoints.push(pt)
+      outliers.push(pt)
       return false
     }
   })
-  return { filteredPoints, strippedPoints, medianPoint }
+  return { filteredPoints, outliers, medianPoint }
 }
 
 // alpha: minimum number of points for cluster NOT to be considered as outlier
@@ -44,11 +44,18 @@ function dbscan (points, alpha, radius, neighbours) {
 
   // if a cluster has more than "alpha" points, add it to the results
   const filteredPoints = []
-  clusters.forEach((cluster, i, arr) => {
+  clusters.forEach(cluster => {
     if (cluster.length >= _alpha) {
       cluster.forEach(i => filteredPoints.push(points[i]))
     }
   })
 
-  return filteredPoints
+  // subtract filteredPoints from points to get outliers
+  const outliers = points.filter(n => !isPointInArray(filteredPoints, n))
+
+  return { filteredPoints, outliers }
+}
+
+function isPointInArray (arr, pt) {
+  return arr.some(el => JSON.stringify(el) === JSON.stringify(pt))
 }
