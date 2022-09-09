@@ -27,10 +27,10 @@ const points = [
   [0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1], [5, 5]
 ]
 
-const { filteredPoints, strippedPoints, medianPoint } = ellipseMad(points)
+const { filteredPoints, outliers, medianPoint } = ellipseMad(points)
 
 console.log(filteredPoints) // [[0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1]]
-console.log(strippedPoints) // [[ 5, 5 ]]
+console.log(outliers) // [[ 5, 5 ]]
 console.log(medianPoint) // [ 0.75, 0.75 ]
 ```
 
@@ -47,11 +47,15 @@ const points = [
   [0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1], [5, 5], [5, 6], [51, 51]
 ]
 
-console.log(dbscan(points))
+const res = dbscan(points)
+console.log(res.filteredPoints, res.outliers)
 // [[0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1]]
+// [[5, 5], [5, 6], [51, 51]]
 
-console.log(dbscan(points, 2, 3, 2))
+const res2 = dbscan(points, 2, 3, 2)
+console.log(res2.filteredPoints, res2.outliers)
 // [[0, 0], [0, 1], [0.5, 0.5], [1, 0], [1, 1], [5, 5], [5, 6]]
+// [[51, 51]]
 ```
 
 ## Rational
