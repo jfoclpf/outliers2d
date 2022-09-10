@@ -14,8 +14,9 @@ It may use:
 #### Median Absolute Deviation error ellipse
 ![image](https://user-images.githubusercontent.com/3984909/188286763-21dbf76d-3968-4618-9f8c-83a7e3cbee13.png)
 
-#### DBSCAN
-![image](https://user-images.githubusercontent.com/3984909/188984112-d0fa6ef6-a75c-4cda-8ebd-1bbc41cb233d.png)
+#### DBSCAN (alpha = 10, radius = 0.008, neighbours = 3)
+![image](https://user-images.githubusercontent.com/3984909/189483575-92710926-7dc0-462d-abd5-c040ff23342a.png)
+
 
 
 ## ellipseMad(points [, sigma = 3.5])
