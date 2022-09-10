@@ -17,6 +17,10 @@ It may use:
 #### DBSCAN (alpha = 10, radius = 0.008, neighbours = 3)
 ![image](https://user-images.githubusercontent.com/3984909/189483575-92710926-7dc0-462d-abd5-c040ff23342a.png)
 
+#### DBSCAN (alpha = 10, radius = 0.002, neighbours = 3)
+![image](https://user-images.githubusercontent.com/3984909/189502833-f79119c6-e9c9-4ca8-9077-9250d74f812b.png)
+
+
 
 
 ## ellipseMad(points [, sigma = 3.5])
