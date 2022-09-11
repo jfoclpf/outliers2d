@@ -12,7 +12,7 @@ It may use:
 - [DBSCAN](https://en.wikipedia.org/wiki/DBSCAN) considering the main cluster as the cluster with more points
 
 #### Median Absolute Deviation error ellipse
-![image](https://user-images.githubusercontent.com/3984909/188286763-21dbf76d-3968-4618-9f8c-83a7e3cbee13.png)
+![188286763-21dbf76d-3968-4618-9f8c-83a7e3cbee13](https://user-images.githubusercontent.com/3984909/189523870-48215ef8-9558-4db7-ba1d-e40b09418fe3.png)
 
 #### DBSCAN (alpha = 10, radius = 0.008, neighbours = 3)
 ![image](https://user-images.githubusercontent.com/3984909/189483575-92710926-7dc0-462d-abd5-c040ff23342a.png)
