@@ -1,6 +1,6 @@
 {
   "name": "outliers2d",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "Remove outliers in maps or 2D cartesian coordinate systems",
   "main": "index.js",
   "scripts": {
