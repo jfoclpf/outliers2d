@@ -1,5 +1,3 @@
-[![Node.js CI](https://github.com/jfoclpf/outliers2d/actions/workflows/node.js.yml/badge.svg)](https://github.com/jfoclpf/outliers2d/actions/workflows/node.js.yml)
-[![CodeQL Security Check](https://github.com/jfoclpf/outliers2d/actions/workflows/codeql.yml/badge.svg)](https://github.com/jfoclpf/outliers2d/actions/workflows/codeql.yml)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://standardjs.com/)
 [![Known Vulnerabilities](https://snyk.io/test/github/jfoclpf/outliers2d/badge.svg)](https://snyk.io/test/github/jfoclpf/outliers2d)
 
